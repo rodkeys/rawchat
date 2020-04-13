@@ -1,0 +1,28 @@
+.MessageExternalLink {
+  margin: 10px;
+  border-radius: 10px;
+  object-fit: cover;
+  width: 200px;
+  height: 150px;
+}
+
+
+
+.MessageExternalLinkParentContainer {
+  .MessageExternalLink {
+    cursor: pointer;
+  }
+
+  .MessageExternalLink:hover {
+    background-color: #000;
+    opacity: 0.5;
+    transition: 100ms all;
+  }
+}
+
+.lightboxPreviewContent {
+  .MessageExternalLink {
+    width: auto !important;
+    height: auto !important;
+  }
+}

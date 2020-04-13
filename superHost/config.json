@@ -1,0 +1,7 @@
+{
+    "host": "raw.chat",
+    "sslKey": "/etc/letsencrypt/live/raw.chat/privkey.pem",
+    "sslCert": "/etc/letsencrypt/live/raw.chat/fullchain.pem",
+    "blackListedExtensions": ["exe", "dll", "com", "pif", "msi", "jar", "js", "bat"],
+    "adminPassword": "yourSuperSecurePasswordHere"
+}

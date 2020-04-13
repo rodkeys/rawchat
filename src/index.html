@@ -1,0 +1,87 @@
+<!doctype html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <title>Raw Chat</title>
+  <meta name="description" content="">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <script async src="https://zokos.com/assets/js/embedlyPlatform.js" charset="UTF-8"></script>
+  <script src="https://zokos.com/assets/js/modernizr-custom.js"> </script>
+  <!-- This is used -->
+  <style class="embedly-css">
+  .theme-dark .card a {
+    color: #EEE !important;
+  }
+
+  .card.reddit .reddit-post {
+    border-radius: 5px;
+    border: 1px solid #696969 !important;
+  }
+
+  .embedly-card {
+    display: none;
+  }
+
+  .embedly-card-hug {
+    padding-left: 9px !important;
+  }
+
+  </style>
+  <style>
+  body {
+    background: #00103f;
+  }
+
+  </style>
+</head>
+
+<body>
+  <!--[if lt IE 8]>
+    <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+  <![endif]-->
+  <script>
+  window.clearBackground = function() {
+    var checkExist = setInterval(() => {
+      if (document.getElementById("root")) {
+        clearInterval(checkExist);
+        document.getElementById("root").innerHTML = "";
+      }
+    }, 100)
+    alert("Your browser does not support this website. Please use a different browser.")
+  }
+
+  Modernizr.on('indexeddb', function(result) {
+    if (!result) {
+      window.clearBackground();
+    } else {
+      // the browser does not have indexeddb
+    }
+  });
+
+
+
+  window.prefilledChannelPeers = {};
+  // Track whether page is a new tab and whether to use a new IPFS repo or not
+  // Temporary workaround until you change the messaging system
+  var newTab;
+  // Broad cast that your're opening a page.
+  localStorage.openpages = Date.now();
+  var onLocalStorageEvent = function(e) {
+    if (e.key == "openpages") {
+      // Listen if anybody else opening the same page!
+      localStorage.page_available = Date.now();
+      newTab = false;
+    }
+    if (e.key == "page_available") {
+      newTab = true;
+    }
+  };
+  window.addEventListener('storage', onLocalStorageEvent, false);
+
+  </script>
+  <div id="root">
+</body>
+
+</html>

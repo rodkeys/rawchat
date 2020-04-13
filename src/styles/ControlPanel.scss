@@ -1,0 +1,322 @@
+@import "Animations";
+@import "Colors";
+
+$channel-name-max-height: 5.5vmin;
+$channel-name-min-height: 1.5em;
+
+.invisible {
+  visibility: hidden;
+}
+
+.hidden {
+  visibility: hidden;
+}
+
+.ControlPanel {
+  color: #FFF;
+  position: absolute;
+  z-index: 100;
+  background: #222941;
+  max-width: 20em;
+  min-width: 20em;
+  height: 100%;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  flex: 1 1 100%;
+  box-shadow: 20px 0px 70px #111427;
+  font-weight: 400;
+  min-height: 850px;
+
+  &.left {
+    left: 0;
+    border-left: "0";
+  }
+
+  &.right {
+    right: 0;
+    border-right: "0";
+  }
+
+  .panelHeader {
+    display: flex;
+    flex-direction: column;
+    height: 2em;
+    margin: 0em 1.25em;
+    margin-bottom: 0.5em;
+    color: #9884ff;
+    font-size: 0.8em;
+    font-weight: bold;
+    text-transform: uppercase;
+  }
+
+  .link {
+    width: 100%;
+    display: flex;
+    align-items: stretch;
+    flex: 1;
+  }
+
+  .openChannels {
+    display: flex;
+    flex: 1 1 100%;
+    overflow: auto;
+  }
+
+  .joinChannelInput {
+    display: flex;
+    justify-content: stretch;
+    box-sizing: border-box;
+    margin: 3em 0em;
+    margin-bottom: 2em;
+
+    input::placeholder {
+      color: rgba(255, 255, 255, 0.8);
+    }
+  }
+
+  .spinner {
+    position: absolute;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    margin: 2em 0em;
+    margin-bottom: 1.5em;
+  }
+
+  .header {
+    display: flex;
+    justify-content: center;
+    box-sizing: border-box;
+
+    font-weight: normal;
+    font-size: 2.6em;
+    color: rgba(228, 228, 228, 0.8);
+
+    padding: 0em 0.2em;
+    margin-top: 0.05em;
+
+    cursor: pointer;
+    user-select: none;
+
+    .logo {
+      margin-top: 0.75em;
+      letter-spacing: -2px;
+      color: #7d64ff;
+      font-weight: 600;
+    }
+  }
+
+  &.no-close {
+    .header {
+      cursor: default;
+      user-select: none;
+    }
+  }
+
+  .networkName {
+    display: flex;
+    justify-content: center;
+    box-sizing: border-box;
+    padding: 0em 0.2em;
+    color: #FFF;
+  }
+
+  .userProfile {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    margin-top: 2em;
+    margin-bottom: 0.5em;
+  }
+
+  .exploreRoomsButton {
+    display: flex;
+    justify-content: center;
+    box-sizing: border-box;
+    font-size: 16px;
+    color: #FFF;
+    margin-top: 1.5em;
+    background: #7d64ff;
+    box-shadow: 0px 4px 0px #6149e0;
+    padding: 10px 20px;
+    border-radius: 6px;
+    width: fit-content;
+    margin: 20px auto;
+    cursor: pointer;
+    position: relative;
+
+    &:hover {
+      background: #6149e0;
+    }
+
+    &:active {
+      top: 2px;
+    }
+  }
+
+  .channelsList {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+
+    overflow: auto;
+    margin: 1em;
+    margin-top: 0;
+    margin-bottom: 0;
+    box-sizing: border-box;
+
+    font-weight: bold;
+    max-height: calc(100% - 30px);
+
+    .row {
+      box-sizing: border-box;
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: stretch;
+      color: #FFF;
+      font-weight: 400;
+      margin-right: 0.2em;
+      margin-bottom: 10px;
+      padding: 10px;
+      border: solid 1px rgba(255, 255, 255, 0.1);
+      border-radius: 6px;
+      cursor: pointer;
+      min-height: 47px;
+
+      &:hover {
+        .closeChannelButton {
+          background-color: #1e243a;
+          cursor: pointer;
+          border-radius: 6px;
+          color: #fff;
+        }
+
+        background-color: #7d64ff;
+        color: #fafafa;
+        border: 1px solid transparent;
+
+        .ChannelLink:before {
+          color: #fff !important;
+        }
+      }
+
+      .ChannelLink {
+        display: flex;
+        flex: 1 1 80%;
+        padding: 0.2em;
+        align-items: stretch;
+      }
+
+      &.active .ChannelLink:before {
+        content: "→";
+        margin-right: 8px;
+        color: #7d64ff;
+      }
+
+      .closeChannelButton {
+        font-size: 0.8em;
+        padding: 0em 1em;
+        box-sizing: border-box;
+        flex: 1 1 20%;
+        align-items: center;
+        display: flex;
+        color: #7d64ff;
+        position: relative;
+      }
+
+      .closeChannelButton:active {
+        top: 1px;
+      }
+
+
+
+      .unreadMessages {
+        color: $main-text-color;
+        flex-direction: column;
+        align-items: center;
+        min-width: 2em;
+        margin: 2px 1em 1px 1em;
+        align-self: center;
+      }
+
+      .hasMentions {
+        background: $main-color;
+      }
+    }
+  }
+
+  .bottomRow {
+    box-sizing: border-box;
+    min-height: fit-content;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-end;
+    align-self: center;
+    width: 50%;
+    color: 000;
+    color: rgba(220, 220, 220, 0.2);
+    cursor: pointer;
+    outline: none;
+
+    .icon {
+      color: rgba(220, 220, 220, 0.2);
+      font-size: 1em;
+      padding: 0.5em;
+      margin-bottom: 0.5em;
+    }
+
+    .icon:hover {
+      color: rgba(220, 220, 220, 0.8);
+    }
+  }
+
+  .settingsRow:hover {
+    background: transparent;
+    cursor: pointer;
+  }
+
+  .submitButton,
+  input[type="submit"] {
+    display: flex;
+    align-self: flex-end;
+    margin: 0.75em;
+    padding-top: 0.5em;
+    padding-bottom: 0.5em;
+  }
+
+  .startIpfsButton {
+    margin-top: 20px;
+    align-self: center;
+    color: $main-text-color;
+    border: 1px solid $bar-background-color;
+    font-size: 0.8em;
+    line-height: 1.5;
+  }
+}
+
+.darkener {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 99;
+  background-color: rgba(0, 0, 0, 0.33);
+  cursor: pointer;
+
+  &.no-close {
+    cursor: default;
+    user-select: none;
+  }
+}
+
+.controlPanelHeaderContainer {
+  min-height: 287px;
+}

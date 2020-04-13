@@ -1,0 +1,32 @@
+@import 'Colors';
+
+.Disclaimer {
+  box-sizing: border-box;
+
+  position: absolute;
+  width: 100%;
+  padding: 8px;
+  top: 0px;
+
+  .content {
+    padding: 10px;
+    text-align: center;
+    border-radius: 4px;
+    font-weight: 500;
+    font-size: 30px;
+    color: #FFF;
+    font-weight: 600;
+    letter-spacing: -1px;
+  }
+
+  .secondDisclaimerTitlePart {
+    color: #7d64fe;
+  }
+
+  .disclaimerLogo {
+    height: 34px;
+    margin-right: 12px;
+    position: relative;
+    top: 1px;
+  }
+}

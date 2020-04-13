@@ -1,0 +1,17 @@
+.ExploreRoomsView {
+  margin-top: 2em;
+}
+
+.exploreMainSubHeader {
+  margin-bottom: 3em !important;
+}
+
+@media (max-width: 600px) {
+  .ExploreRoomsView {
+    margin-top: 1em;
+  }
+
+  .exploreMainSubHeader {
+    margin-bottom: 2em !important;
+  }
+}

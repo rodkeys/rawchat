@@ -1,0 +1,32 @@
+.ChannelRoomProfilePanelContainer {
+  position: absolute;
+  width: 186px;
+  max-height: 355px;
+  bottom: 30px;
+  background-color: #333d61;
+  box-shadow: 0px 0px 70px #151b3c;
+  display: block !important;
+  overflow: auto;
+  border-radius: 5px;
+  margin: 0px !important;
+  text-transform: none;
+  right: 0px;
+  outline: none;
+}
+
+.ChannelRoomProfilePanelUser {
+  text-align: center;
+  word-break: break-word;
+  font-size: 12px;
+  border-bottom: solid 1px #212121;
+  padding: .75em 1em;
+}
+
+.ChannelRoomProfilePanelUser:last-child {
+  border-bottom: none;
+}
+
+.ChannelStatusUsers {
+  cursor: pointer;
+  outline: none;
+}

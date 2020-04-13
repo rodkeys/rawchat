@@ -1,0 +1,68 @@
+@keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  50% {
+    opacity: 0.3;
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.PeerPicker {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  position: absolute;
+  padding: 4px;
+  margin: 0 12px 0 5px;
+  list-style: none;
+  background-color: #333d61;
+  box-shadow: 0px 0px 70px #151b3c;
+
+  > * {
+    display: flex;
+    padding: 1px;
+  }
+
+  > *:hover {
+     background-color: #252f50;
+  }
+
+  .selected {
+    background-color: #252f50;
+    border: 1px solid #2f344c;
+  }
+}
+
+.fadeUpAnimation {
+  animation: fadeInUp;
+  animation-duration: 0.1s;
+  animation-fill-mode: both;
+  animation-timing-function: ease-out;
+}
+
+.SinglePeerPickerName {
+	width: 156px;
+    font-size: 12px;
+    color: rgba(228, 228, 228, 0.8);
+    letter-spacing: 1px;
+    font-weight: bold;
+    padding: .75em 1em;
+    border-radius: 5px;
+}
+
+.PeerPickerContainer {
+	  max-width: 156px;
+    text-align: center;
+    word-break: break-word;
+    font-size: 12px;
+    border-bottom: solid 1px #212121;
+    padding: .75em 1em;
+    border-radius: 5px;
+    max-height: 188px;
+    overflow: auto;
+}

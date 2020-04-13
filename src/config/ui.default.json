@@ -1,0 +1,16 @@
+{
+  "themeName": "default",
+  "language": "en",
+  "sidePanelPosition": "left",
+  "colorifyUsernames": true,
+  "useEmojis": true,
+  "useSuggestedModeration": true,
+  "emojiSet": "emojione",
+  "useMonospaceFont": false,
+  "useLargeMessage": false,
+  "messageNotifications": "mentions",
+  "appVersion": "",
+  "ipfsGateway": "https://ipfs.io/ipfs/",
+  "bootstrapNodes": ["/dns4/raw.chat/tcp/4000/wss/ipfs/QmRrd55shYt43Qe5WMmCjmeHEUoDeDxV3G8XfrdWfFGyaG"],
+  "defaultChannels": ["lobby"]
+}

@@ -1,0 +1,130 @@
+@import 'Colors';
+
+$channel-name-max-height: 5vmin;
+$channel-name-min-height: 1.6em;
+
+.Header {
+  min-height: fit-content;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: row;
+  background: transparent;
+  border: solid 1px rgba(255, 255, 255, 0.1);
+  border-radius: 8px;
+  margin: 10px 20px;
+  align-items: center;
+  font-weight: 400;
+  letter-spacing: -1px;
+  font-size: 2em;
+  color: #FFF;
+  padding: 10px 10px;
+  word-break: break-all;
+
+  .notificationsIcon {
+    position: absolute;
+    font-size: 0.8em;
+    top: 1.1em;
+    right: 1.1em;
+    padding-top: -0.2em;
+  }
+
+  .icon {
+    font-size: 0.8em;
+    cursor: pointer;
+    font-weight: 100;
+  }
+
+  .headerUsernameContainer {
+    display: flex;
+    justify-content: flex-start;
+    font-size: 24px;
+    color: #FFF;
+    margin-left: 0.35em;
+    position: absolute;
+    left: 80px;
+  }
+
+  .headerCurrentChannelContainer {
+    flex: 1 0;
+    font-size: 24px;
+    color: #FFF;
+    display: flex;
+    justify-content: center;
+    margin-left: 3.25em;
+  }
+
+  .headerRandomRoomButton {
+    display: flex;
+    justify-content: center;
+    box-sizing: border-box;
+    font-size: 16px;
+    color: #FFF;
+    background: #7d64ff;
+    box-shadow: 0px 4px 0px #6149e0;
+    padding: 10px 20px;
+    border-radius: 6px;
+    width: fit-content;
+    cursor: pointer;
+    position: relative;
+    user-select: none;
+
+    &:hover {
+      background: #6149e0;
+    }
+
+    &:active {
+      top: 2px;
+    }
+  }
+
+
+  @media (max-width: 800px) {
+    .headerUsernameContainer {
+      display: none;
+    }
+
+    .headerRandomRoomButton {
+      display: none;
+    }
+
+    .headerCurrentChannelContainer {
+      margin-left: .25em;
+      justify-content: normal;
+    }
+  }
+
+
+
+
+  .unreadMessages {
+    position: absolute;
+    top: 15px;
+    left: 45px;
+    font-weight: 400;
+    font-size: 0.6em;
+    color: rgba(240, 240, 240, 0.9);
+    background-color: #7d64fe;
+    box-shadow: 0px 2px 0px #6149e0;
+    border-radius: 4px;
+    line-height: 1.2;
+    display: flex;
+    justify-content: center;
+    height: 1.2em;
+    min-width: 1.2em;
+    padding: 0.1em;
+  }
+}
+
+.channelHeaderAnimation-enter {
+  animation: slideFromLeft;
+  animation-duration: 0.3s;
+  animation-fill-mode: both;
+  animation-timing-function: ease-out;
+}
+
+.channelHeaderAnimation-leave {
+  animation: fadeOutRight;
+  animation-duration: 0.3s;
+  animation-fill-mode: both;
+  animation-timing-function: ease-out;
+}

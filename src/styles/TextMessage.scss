@@ -1,0 +1,63 @@
+.TextMessage {
+    display: flex;
+    word-break: break-word;
+    flex: 1 0;
+    align-items: center;
+    word-wrap: break-word;
+    word-wrap: break-word;
+    white-space: pre-wrap;
+    -webkit-hyphens: auto;
+    -ms-hyphens: auto;
+    font-weight: 500;
+    hyphens: auto;
+    color: #FFF;
+
+  a {
+    color: #7d64ff;
+    text-decoration: none;
+    cursor: pointer;
+  }
+
+  a:hover {
+    color: #9884ff;
+    text-decoration: none;
+  }
+
+  img {
+    vertical-align: bottom;
+  }
+
+  .content2 {
+    width: 100%;
+  }
+
+  .highlight {
+    font-weight: bolder;
+    color: rgba(240, 96, 96, 1);
+  }
+
+  .emoji-mart-emoji {
+    vertical-align: bottom;
+  }
+}
+
+.loading {
+  color: rgba(240, 244, 240, 0.1);
+}
+
+
+.LinkMessage {
+
+  iframe,
+  img {
+    max-height: 31em;
+    padding: 10px !important;
+    margin-top: 10px !important;
+    background: rgba(255, 255, 255, 0.97);
+  }
+
+  .embedly-card-hug {
+    margin: 0px !important;
+  }
+}
+
