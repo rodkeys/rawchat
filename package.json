@@ -39,7 +39,7 @@
     "domkit": "0.0.3",
     "emoji-mart": "^2.9.1",
     "fslightbox-react": "^1.4.9",
-    "highlight.js": "^9.15.10",
+    "highlight.js": "^10.4.1",
     "i18next": "^17.0.16",
     "ipfs": "^0.40.0",
     "level-mem": "^5.0.1",
